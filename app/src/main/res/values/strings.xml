@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Unit Converter</string>
+
+    <string-array name="start_con_array">
+        <item>Cups</item>
+        <item>Ounces</item>
+        <item>Gallons</item>
+        <item>Pints</item>
+        <item>Liters</item>
+    </string-array>
+
+    <string name="from_prompt">Convert From</string>
+    <string name="to_prompt">Convert To</string>
+
 </resources>
