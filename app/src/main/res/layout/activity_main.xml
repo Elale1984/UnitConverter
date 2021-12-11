@@ -7,28 +7,54 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/con_from_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_from"
+        android:textColor="#75e900"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/convert_from_units"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <Spinner
         android:id="@+id/convert_from_units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:entries="@array/start_con_array"
-        android:spinnerMode="dialog"
+        android:minHeight="48dp"
         android:prompt="@string/from_prompt"
-        android:layout_marginTop="16dp"
+        android:spinnerMode="dialog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/con_from_lbl"
+        tools:ignore="DuplicateSpeakableTextCheck">
 
     </Spinner>
+
+    <TextView
+        android:id="@+id/con_to_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_to"
+        android:textColor="#FB7107"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/convert_to_units"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
     <Spinner
         android:id="@+id/convert_to_units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:entries="@array/start_con_array"
-        android:spinnerMode="dialog"
+        android:minHeight="48dp"
         android:prompt="@string/to_prompt"
-        android:layout_marginTop="16dp"
+        android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/con_to_lbl">
 
     </Spinner>
 

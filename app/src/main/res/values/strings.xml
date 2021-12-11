@@ -11,5 +11,7 @@
 
     <string name="from_prompt">Convert From</string>
     <string name="to_prompt">Convert To</string>
+    <string name="convert_from">Convert From:</string>
+    <string name="convert_to">Convert To:</string>
 
 </resources>
