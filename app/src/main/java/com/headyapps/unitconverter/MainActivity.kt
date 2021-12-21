@@ -35,16 +35,34 @@ class MainActivity : AppCompatActivity() {
         btn_convert.setOnClickListener { convertUnits(convert_from_units.selectedItem, convert_to_units.selectedItem) }
 
     }
-// This method handles the conversion based on the selected items from the convert_from_units and the convert_to_units
-    private fun convertUnits(selectedItem: Any?, selectedItem1: Any?) {
 
-        var unitsFrom = selectedItem;
-        var unitsTo = selectedItem1;
+    // This method handles the conversion based on the selected items from the convert_from_units and the convert_to_units
+    private fun convertUnits(unitsFrom: Any?, unitsTo: Any?) {
 
         when (unitsFrom) {
-            "Cups" ->
+            "Cups", "Ounces", "Gallons", "Pints", "Liters" ->
+
                 when (unitsTo) {
-                    "Gallons" -> Toast.makeText(this@MainActivity, "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT).show()
+                    "Cups" -> Toast.makeText(
+                        this@MainActivity,
+                        "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT
+                    ).show()
+                    "Ounces" -> Toast.makeText(
+                        this@MainActivity,
+                        "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT
+                    ).show()
+                    "Gallons" -> Toast.makeText(
+                        this@MainActivity,
+                        "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT
+                    ).show()
+                    "Pints" -> Toast.makeText(
+                        this@MainActivity,
+                        "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT
+                    ).show()
+                    "Liters" -> Toast.makeText(
+                        this@MainActivity,
+                        "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT
+                    ).show()
                 }
         }
 
