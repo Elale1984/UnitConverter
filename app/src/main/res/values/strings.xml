@@ -2,6 +2,7 @@
     <string name="app_name">Unit Converter</string>
 
     <string-array name="start_con_array">
+        <item></item>
         <item>Cups</item>
         <item>Ounces</item>
         <item>Gallons</item>

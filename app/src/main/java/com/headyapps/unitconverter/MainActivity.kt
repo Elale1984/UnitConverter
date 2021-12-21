@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         //setting convert from spinner
         convert_from_units.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                Toast.makeText(this@MainActivity, resources.getStringArray(R.array.start_con_array)[position], Toast.LENGTH_SHORT)
-                    .show()
+
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -26,11 +25,30 @@ class MainActivity : AppCompatActivity() {
         //setting convert to spinner
         convert_to_units.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                Toast.makeText(this@MainActivity, resources.getStringArray(R.array.start_con_array)[position], Toast.LENGTH_SHORT)
-                    .show()
+
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
+
+
+        btn_convert.setOnClickListener { convertUnits(convert_from_units.selectedItem, convert_to_units.selectedItem) }
+
     }
+// This method handles the conversion based on the selected items from the convert_from_units and the convert_to_units
+    private fun convertUnits(selectedItem: Any?, selectedItem1: Any?) {
+
+        var unitsFrom = selectedItem;
+        var unitsTo = selectedItem1;
+
+        when (unitsFrom) {
+            "Cups" ->
+                when (unitsTo) {
+                    "Gallons" -> Toast.makeText(this@MainActivity, "Convert to $unitsFrom to $unitsTo", Toast.LENGTH_SHORT).show()
+                }
+        }
+
+    }
+
+
 }
