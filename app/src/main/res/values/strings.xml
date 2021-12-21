@@ -14,5 +14,9 @@
     <string name="to_prompt">Convert To</string>
     <string name="convert_from">Convert From:</string>
     <string name="convert_to">Convert To:</string>
+    <string name="convert">Convert</string>
+    <string name="_0">0</string>
+    <string name="result">Result</string>
+    <string name="initial_measurement">initial measurement</string>
 
 </resources>

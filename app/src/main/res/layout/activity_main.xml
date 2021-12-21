@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,11 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/convert_from"
-        android:textColor="#75e900"
+        android:textColor="#2E7D32"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/convert_from_units"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/convert_from_units"
@@ -38,11 +38,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/convert_to"
-        android:textColor="#FB7107"
+        android:textColor="#DD2C00"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@+id/convert_to_units"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/convert_to_units"
@@ -63,9 +62,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        android:text="Convert"
+        android:text="@string/convert"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_conversion_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/_0"
+        android:textColor="#4CF105"
+        android:textSize="48sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_conversion_result_label"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/txt_conversion_result_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/result"
+        android:textColor="#4CF105"
+        android:textSize="48sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_initial_input"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/et_initial_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:ems="10"
+        android:hint="Initial Mesurement"
+        android:inputType="textPersonName|numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#4CF105"
+        android:textColorHint="#AAB5B2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
