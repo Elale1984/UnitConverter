@@ -18,5 +18,6 @@
     <string name="_0">0</string>
     <string name="result">Result</string>
     <string name="initial_measurement">initial measurement</string>
+    <string name="initial_mesurement">Initial Mesurement</string>
 
 </resources>
