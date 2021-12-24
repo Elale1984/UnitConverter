@@ -130,14 +130,14 @@
         android:id="@+id/tvUnits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="37dp"
         android:text="units"
         android:textAlignment="center"
         android:textColor="#4CF105"
         android:textSize="20sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_conversion_result_label"
-        app:layout_constraintStart_toEndOf="@+id/txt_conversion_result_label" />
+        app:layout_constraintStart_toEndOf="@+id/txt_conversion_result"
+        app:layout_constraintTop_toTopOf="@+id/txt_conversion_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
