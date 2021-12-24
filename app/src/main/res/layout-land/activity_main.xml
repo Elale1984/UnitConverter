@@ -12,17 +12,20 @@
         android:id="@+id/con_from_lbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="16dp"
         android:text="@string/convert_from"
         android:textColor="#2E7D32"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/convert_from_units"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/convert_from_units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="7dp"
         android:entries="@array/start_con_array"
         android:minHeight="48dp"
         android:prompt="@string/from_prompt"
@@ -37,22 +40,25 @@
         android:id="@+id/con_to_lbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="25dp"
         android:text="@string/convert_to"
         android:textColor="#DD2C00"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/convert_to_units"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_from_units" />
 
     <Spinner
         android:id="@+id/convert_to_units"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
         android:layout_marginTop="6dp"
         android:entries="@array/start_con_array"
         android:minHeight="48dp"
         android:prompt="@string/to_prompt"
         android:spinnerMode="dialog"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/con_to_lbl">
 
     </Spinner>
@@ -61,23 +67,23 @@
         android:id="@+id/btn_convert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="267dp"
+        android:layout_marginTop="14dp"
         android:text="@string/convert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_initial_input" />
 
     <TextView
         android:id="@+id/txt_conversion_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="53dp"
         android:text="@string/_0"
         android:textColor="#4CF105"
         android:textSize="48sp"
         android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_conversion_result_label"
         app:layout_constraintTop_toBottomOf="@+id/txt_conversion_result_label"
         tools:ignore="TextContrastCheck" />
 
@@ -85,22 +91,24 @@
         android:id="@+id/txt_conversion_result_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="45dp"
         android:text="@string/result"
         android:textColor="#4CF105"
         android:textSize="48sp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_convert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_initial_input"
+        app:layout_constraintStart_toStartOf="@+id/btn_convert"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
     <EditText
         android:id="@+id/et_initial_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="148dp"
         android:ems="10"
         android:hint="@string/initial_mesurement"
         android:importantForAutofill="no"
@@ -108,10 +116,10 @@
         android:textAlignment="center"
         android:textColor="#4CF105"
         android:textColorHint="#AAB5B2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/convert_from_units"
+        app:layout_constraintEnd_toStartOf="@+id/btn_convert"
+        app:layout_constraintStart_toStartOf="@+id/btn_convert"
+        app:layout_constraintTop_toTopOf="@+id/convert_from_units"
         tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <ProgressBar
@@ -119,25 +127,25 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="32dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/txt_conversion_result_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_initial_input"
+        app:layout_constraintStart_toStartOf="@+id/btn_convert"
+        app:layout_constraintTop_toBottomOf="@+id/btn_convert"
         tools:visibility="invisible" />
 
     <TextView
         android:id="@+id/tvUnits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="3dp"
-        android:text="units"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/units"
         android:textAlignment="center"
         android:textColor="#4CF105"
         android:textSize="20sp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/txt_conversion_result_label"
-        app:layout_constraintStart_toEndOf="@+id/txt_conversion_result_label" />
+        app:layout_constraintBottom_toBottomOf="@+id/txt_conversion_result"
+        app:layout_constraintStart_toEndOf="@+id/txt_conversion_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

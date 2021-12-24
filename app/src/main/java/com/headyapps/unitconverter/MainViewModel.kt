@@ -12,18 +12,22 @@ class MainViewModel : ViewModel() {
     private val _conversionState = MutableStateFlow<ConversionUIState>(ConversionUIState.Empty)
     val conversionUIState: StateFlow<ConversionUIState> = _conversionState
 
-    fun convert(convertFrom: String, convertTo: String, convertInput: String, convertResult: String) = viewModelScope.launch {
+    fun convert(
+        convertFrom: String,
+        convertTo: String,
+        convertInput: String,
+    ) = viewModelScope.launch {
 
         if(convertFrom != "" && convertTo != "" && convertInput != "") {
 
             _conversionState.value = ConversionUIState.Loading
-            delay(1000L)
+            delay(500L)
 
 
             val conversionInput = convertInput.toInt()
             val convertedResult = conversionInput * 5
 
-            _conversionState.value = ConversionUIState.Success(convertedResult)
+            _conversionState.value = ConversionUIState.Success(convertedResult, convertTo)
 
 
 
@@ -33,7 +37,7 @@ class MainViewModel : ViewModel() {
         }
     }
     sealed class ConversionUIState {
-        data class Success(val result: Int) : ConversionUIState()
+        data class Success(val result: Int, val convertedType: String) : ConversionUIState()
         data class Error(val message: String) : ConversionUIState()
         object Loading : ConversionUIState()
         object Empty : ConversionUIState()

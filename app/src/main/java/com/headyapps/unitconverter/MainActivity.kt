@@ -35,13 +35,13 @@ class MainActivity : AppCompatActivity() {
             var convertTo =  binding.convertToUnits.selectedItem.toString()
             var unitAmount = binding.etInitialInput.text.toString()
             var convertedResult = binding.txtConversionResult.text.toString()
+            var convertedType = binding.tvUnits.toString()
 
 //          Sending to method convert and sending data to stateflow
             viewModel.convert(
                 convertFrom,
                 convertTo,
-                unitAmount,
-                convertedResult
+                unitAmount
 
             )
         }
@@ -57,7 +57,9 @@ class MainActivity : AppCompatActivity() {
                         binding.progressBar.isVisible = false
                         binding.txtConversionResult.isVisible = true
                         binding.txtConversionResultLabel.isVisible = true
+                        binding.tvUnits.isVisible = true
                         binding.txtConversionResult.text = it.result.toString()
+                        binding.tvUnits.text = it.convertedType
 
                         when (binding.convertFromUnits.selectedItem.toString()) {
                             "Cups", "Ounces", "Gallons", "Pints", "Liters" ->
@@ -100,6 +102,7 @@ class MainActivity : AppCompatActivity() {
                         binding.progressBar.isVisible = true
                         binding.txtConversionResult.isVisible = false
                         binding.txtConversionResultLabel.isVisible = false
+                        binding.tvUnits.isVisible = false
                     }
                     else -> Unit
                 }

@@ -19,5 +19,6 @@
     <string name="result">Result</string>
     <string name="initial_measurement">initial measurement</string>
     <string name="initial_mesurement">Initial Mesurement</string>
+    <string name="units">units</string>
 
 </resources>
